@@ -5,7 +5,9 @@ const mongoose = require("mongoose");
 // var encrypt = require("mongoose-encryption");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-const md5 = require("md5");
+// const md5 = require("md5");
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
 
 const app = express();
 
