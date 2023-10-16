@@ -2,7 +2,7 @@
 // require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-var encrypt = require("mongoose-encryption");
+// var encrypt = require("mongoose-encryption");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 // const md5 = require("md5");
@@ -34,7 +34,7 @@ const userSchema = new mongoose.Schema({
 
 // const secret = "thisislittlesecret"
 
-userSchema.plugin(encrypt,{secret:process.env.SECRET,encryptedFields:["password"]});
+// userSchema.plugin(encrypt,{secret:process.env.SECRET,encryptedFields:["password"]});
 
 const User = new mongoose.model("User",userSchema);
 
