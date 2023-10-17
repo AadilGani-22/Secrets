@@ -1,5 +1,5 @@
 //jshint esversion:6
-// require("dotenv").config();
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 // var encrypt = require("mongoose-encryption");
@@ -21,8 +21,9 @@ app.use(bodyParser.urlencoded({
     extended:true
 }));
 
+db_url = process.env.API_KEY
 
-mongoose.connect("mongodb+srv://aadilgani2001:RnRX8ol50nmIIOxV@cluster0.fxupkny.mongodb.net/secrets?directConnection=true",{ useNewUrlParser: true ,useUnifiedTopology: true })
+mongoose.connect(db_url,{ useNewUrlParser: true ,useUnifiedTopology: true })
 .then(()=>console.log('connected Sucessfully'))
 .catch((err)=> {console.log(err);});
 
