@@ -18,6 +18,7 @@
     "md5": "^2.3.0",
     "mongoose": "^5.13.20",
     "mongoose-encryption": "^2.1.2",
+    "node": "^20.7.0",
     "nodemon": "^2.0.21"
   }
 }
