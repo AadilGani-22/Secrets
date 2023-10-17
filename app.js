@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/userDB?directConnection=true")
+mongoose.connect("mongodb+srv://aadilgani2001:RnRX8ol50nmIIOxV@cluster0.fxupkny.mongodb.net/secrets?directConnection=true",{ useNewUrlParser: true ,useUnifiedTopology: true })
 .then(()=>console.log('connected Sucessfully'))
 .catch((err)=> {console.log(err);});
 
